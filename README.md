@@ -13,6 +13,8 @@
 1. Publiez la nouvelle version sur Google Play.
 2. Quand elle est disponible pour les joueurs, changez `version` ici (et `minVersion` si la mise à jour est obligatoire), puis poussez sur `main`.
 
+Pour vérifier le fichier avant de pousser : `node scripts/check-version.mjs`. La même vérification tourne sur chaque PR qui touche `version.json`.
+
 Ne changez `version` qu'**après** la mise en ligne sur le Play Store, sinon les joueurs sont invités à installer une version qu'ils ne trouvent pas encore.
 
 Adresse lue par le jeu : https://raw.githubusercontent.com/Docteur-Parfait/mc-v/main/version.json
