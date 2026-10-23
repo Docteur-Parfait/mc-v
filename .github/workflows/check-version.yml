@@ -1,0 +1,19 @@
+name: Vérifier version.json
+
+on:
+  pull_request:
+    paths:
+      - version.json
+      - scripts/check-version.mjs
+  push:
+    branches: [main]
+    paths:
+      - version.json
+      - scripts/check-version.mjs
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/check-version.mjs
